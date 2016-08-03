@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visual Analytics</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gomez">
+    <meta name="description" content="Visual Analytics">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="../lib/js/d3.min.js"></script>
+    <script src="../lib/js/bumpChartPhotos.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>ISIS 4822 : Visual Analytics</h2><br>
+          <p class="small"><a href="http://johnguerra.co/" target="_blank"><strong>John Alexis Guerra Gómez</strong></a><span>| ja.guerrag[at]uniandes.edu.co</span><a href="http://twitter.com/duto_guerra">| @duto_guerra</a><br><span><strong>Jose Tiberio Hernandez</strong> | jhernand[at]uniandes.edu.co</span><br><span>Universidad de los Andes</span>
+          </p><br>
+          <p class="small"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2016/01_Introduction/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2016/01_Introduction/</a></p>
+          <p class="tiny">Based on<a href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14">slides from Tamara Munzner</a></p>
+        </section>
+        <section>
+          <section>
+            <h3><a href="http://johnguerra.co/classes/isis_4822_fall_2016/" target="_blank">Syllabus</a></h3>
+            <iframe src="http://johnguerra.co/classes/isis_4822_fall_2016/" target="_blank" class="blocks"></iframe>
+          </section>
+          <section>
+            <h2>Book</h2>
+            <p><a href="https://www.crcpress.com/Visualization-Analysis-and-Design/Munzner/p/book/9781466508910">Visualization Analysis and Design, Tamara Munzner</a></p><img src="https://images.tandf.co.uk/common/jackets/amazon/978146650/9781466508910.jpg">
+          </section>
+          <section>
+            <h2>Projects & Homeworks</h2>
+            <ul>
+              <li>Design critique</li>
+              <li>Individual mid class project</li>
+              <li>Group final project (3 people), 25% of the grade</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Introduction</h1>
+            <h2>Definitions</h2>
+          </section>
+          <section>
+            <h2>Defining Visualization (vis)</h2>
+            <p>Computer-based visualization systems provide visual representations of datasets<span class="fragment"> designed to help people carry out <strong>tasks</strong> more effectively.</span></p>
+            <p class="fragment red">Why?</p>
+          </section>
+          <section>
+            <h2>Have the human in the loop</h2>
+            <p>Visualization is suitable when there is a need to <strong>augment human capabilities</strong> rather than replace people with computational decision-making methods.</p>
+          </section>
+          <section>
+            <h2>When don't use vis?</h2>
+            <p>Don’t need vis when fully automatic solution exists and is trusted</p>
+          </section>
+          <section>
+            <h2>But</h2>
+            <ul>
+              <li>Many analysis problems are ill-specified</li>
+              <ul>
+                <li class="fragment">Don’t know exactly what questions to ask in advance</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h2>Vis allows for</h2>
+            <ul>
+              <li class="fragment">Long-term use for end users (e.g. exploratory analysis of scientific data)</li>
+              <li class="fragment">Presentation of known results</li>
+              <li class="fragment">Stepping stone to better understanding of requirements before developing models</li>
+              <li class="fragment">Help developers of automatic solution refine/debug, determine parameters</li>
+              <li class="fragment">Help end users of automatic solutions verify, build trust</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Why use an external representation?</h2>
+            <p>Computer-based visualization systems provide <strong>visual representations</strong> of datasets designed to help people carry out tasks more effectively.</p>
+          </section>
+          <section>
+            <h2>Why use an external representation?</h2>
+            <p class="fragment">External representation: <span class="fragment">replace cognition <span class="fragment">with perception</span></span></p><img src="images/cognition.png" class="fragment side"><img src="images/perception.png" class="fragment side"><span class="clear"></span>
+            <p class="tiny fragment">[Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE TVCG (Proc. InfoVis) 14(6):1253-1260, 2008.]</p>
+          </section>
+          <section>
+            <h2>Why use computer in the loop?</h2>
+            <p><strong>Computer-based</strong> visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.</p>
+          </section>
+          <section>
+            <h2>Why have a computer in the loop?</h2>
+            <ul>
+              <li class="fragment">Beyond human patience</li>
+              <li class="fragment">Scale to large datasets</li>
+              <li class="fragment">Support interactivity</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Why depend on vision?</h2>
+            <p>Computer-based visualization systems provide <strong>visual</strong> representations of datasets designed to help people carry out tasks more effectively.</p>
+          </section>
+          <section>
+            <h3>Why depend on vision?</h3>
+            <ul class="tiny">
+              <li class="fragment">Human visual system is high-bandwidth channel to brain</li>
+              <ul>
+                <li class="fragment">Overview possible due to background processing</li>
+                <li class="fragment">Subjective experience of seeing everything simultaneously</li>
+                <li class="fragment">Significant processing occurs in parallel and pre-attentively</li>
+              </ul>
+              <li class="fragment">sound: lower bandwidth and different semantics</li>
+              <ul>
+                <li class="fragment">overview not supported</li>
+                <li class="fragment">subjective experience of sequential stream</li>
+              </ul>
+              <li class="fragment">touch/haptics: impoverished record/replay capacity
+                <ul>
+                  <li class="fragment">only very low-bandwidth communication thus far</li>
+                </ul>
+              </li>
+              <li class="fragment">taste, smell: no viable record/replay devices</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Why show data in detail?</h2>
+            <ul>
+              <li class="fragment">Summaries lose information</li>
+              <ul>
+                <li class="fragment">Confirm expected and find unexpected patterns</li>
+                <li class="fragment">Assess validity of statistical model</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h3>The power of your eyes: Anscombe's quartet</h3><img src="images/anscombes.jpg">
+          </section>
+          <section>
+            <h2>Anscombe's quartet</h2><img src="images/anscombes2.jpg">
+          </section>
+          <section>
+            <h2>Anscombe's visualized</h2><img src="images/anscombes_graph.jpg">
+          </section>
+          <section>
+            <h1>Idioms</h1>
+            <p>Distinct approach to creating or manipulating visual representations</p>
+          </section>
+          <section>
+            <h2>Exercise</h2>
+            <p>Let's find in how many ways we can visualize two numbers 13 and 23</p>
+          </section>
+          <section>
+            <h2>Idiom design space</h2>
+            <p>The design space of possible vis idioms is huge, and includes the considerations of both how to create and how to interact with visual representations</p>
+          </section>
+          <section>
+            <h2>Idioms</h2>
+            <ul>
+              <li class="fragment">How to draw it: <strong>visual encoding</strong> idiom</li>
+              <ul>
+                <li class="fragment">Many possibilities for how to create</li>
+              </ul>
+              <li class="fragment">How to manipulate it: <strong>interaction</strong> idiom</li>
+              <ul>
+                <li class="fragment">Even more possibilities</li>
+                <li class="fragment">Make single idiom dynamic</li>
+                <li class="fragment">Link multiple idioms together through interaction</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h3>Why focus in tasks and effectiveness?</h3>
+            <p>Computer-based visualization systems provide visualrepresentations of datasets designed to help people carry out <strong>tasks</strong> more <strong>effectively</strong>.</p>
+          </section>
+          <section>
+            <h3>Why focus in tasks and effectiveness?</h3>
+            <ul class="small">
+              <li class="fragment">Tasks serve as constraint on design (as does data)</li>
+              <ul>
+                <li class="fragment">Idioms do not serve all tasks equally!</li>
+                <li class="fragment">Challenge: recast tasks from domain-specific vocabulary to abstract forms</li>
+              </ul>
+              <li class="fragment">Most possibilities ineffective</li>
+              <ul>
+                <li class="fragment">Validation is necessary, but tricky</li>
+                <li class="fragment">Increases chance of finding good solutions if you understand full space of possibilities</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h3>What counts as effective?</h3>
+            <ul>
+              <li class="fragment">Novel: enable entirely new kinds of analysis</li>
+              <li class="fragment">Faster: speed up existing workflows</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Resource limitations</h2>
+            <p>Vis designers must take into account three very different kinds of resource limitations: those of computers, of humans, and of displays.</p>
+          </section>
+          <section>
+            <h2>Computational limits</h2>
+            <ul>
+              <li class="fragment">Processing time</li>
+              <li class="fragment">System memory</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Human limits</h2>
+            <ul>
+              <li class="fragment">Human attention</li>
+              <li class="fragment">Memory</li>
+              <li class="fragment">Retention</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Display limits</h2>
+            <ul>
+              <li class="fragment">Pixels are precious resource, the most constrained resource</li>
+              <li class="fragment">Information density: ratio of space used to encode info vs unused whitespace</li>
+              <ul>
+                <li class="fragment">Tradeoff between clutter and wasting space, find sweet spot between dense and sparse</li>
+              </ul>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Visual Analytics</h1>
+            <section></section>
+            <h2>How to do data analytics?</h2>
+            <ul>
+              <li class="fragment">Statistical Analysis</li>
+              <li class="fragment">Machine Learning and Artificial Intelligence</li>
+              <li class="fragment">Visual Analytics (and data analytics)</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Data Mining/Machine Learning</h3>
+            <p><img src="images/machine_learning_diagram.png"></p>
+          </section>
+          <section>
+            <h3>Information Visualization</h3>
+            <p><img src="images/infovis_diagram.png"></p>
+          </section>
+          <section>
+            <h3>Visual Analytics</h3>
+            <p><img src="images/infovis_algorithms_diagram.png"></p>
+          </section>
+          <section>
+            <table id="comparisonTable">
+              <tr>
+                <td class="fragment">
+                  <h2>Traditional</h2>
+                  <ul>
+                    <li>Query for known patterns</li>
+                    <li>Display results using  traditional techniques</li>
+                  </ul><br><strong>Pros:</strong><br>
+                  <ul>
+                    <li>Many solutions</li>
+                    <li>Easier to implement</li>
+                  </ul><br><strong>Cons:</strong><br>
+                  <ul>
+                    <li>Can’t search for the unexpected</li>
+                  </ul>
+                </td>
+                <td class="fragment">
+                  <h2>Data Mining/ML</h2>
+                  <ul>
+                    <li>Based on statistics</li>
+                    <li>Black box approach</li>
+                    <li>Output outliers and correlations</li>
+                    <li> Human out of the loop</li>
+                  </ul><br><strong>Pros:</strong><br>
+                  <ul>
+                    <li> Scalable</li>
+                  </ul><br><strong>Cons:</strong>
+                  <ul>
+                    <li> Analysts have to make sense of the results</li>
+                    <li> Makes assumptions on the data</li>
+                  </ul>
+                </td>
+                <td class="fragment">
+                  <h2>InfoVis</h2>
+                  <ul>
+                    <li> Visual Interactive Interfaces</li>
+                    <li> Human in the loop</li>
+                  </ul><br><strong>Pros:</strong><br>
+                  <ul>
+                    <li> Visual bandwidth is enormous</li>
+                    <li> Experts decided what to search for</li>
+                    <li> Identify unknown patterns and errors in the data</li>
+                  </ul><br><strong>Cons</strong><br>
+                  <ul>
+                    <li>Scalability can be an issue</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h2>In Infovis we look for insights</h2>
+            <ul>
+              <li>Deep understanding</li>
+              <li>Meaningful</li>
+              <li>Non obvious</li>
+              <li>Actionable</li>
+            </ul>
+          </section>
+          <section>
+            <h1>Insights</h1>
+          </section>
+          <section id="InsightFDA">
+            <h2>FDA</h2>
+            <p>Task: Change in drug's adverse effects reports</p>
+            <p>User: FDA Analysts</p>
+          </section>
+          <section>
+            <h2>State of the art</h2><img src="images/sectorMaps.png" class="demo">
+          </section>
+          <section><img src="images/side_by_side_Vasc_sectorMaps.png" class="demo"></section>
+          <section><img src="images/skylines_explanation.png"></section>
+          <section><a href="https://treeversity.cattlab.umd.edu/?hierarchy=soc/hlgt/hlt/pt&amp;db=tv2_sectorMaps6&amp;seqFrom=01/01/08&amp;seqTo=01/01/12&amp;viz=Skylines&amp;fixedHierarchy=soc/hlgt/hlt/pt&amp;valueAttrib=ebgm&amp;title=FDA%20Adverse%20Drug%20Effects" target="_blank"><img src="images/2013_03_29_FDA_all.png"></a><a href="https://treeversity.cattlab.umd.edu/" target="_blank">https://treeversity.cattlab.umd.edu/</a></section>
+          <section id="InsightPARC">
+            <h2>Health insurance claims</h2>
+            <p>Task: Detect fraud networks</p>
+            <p>User: Undisclosed Analysts</p>
+          </section>
+          <section><img src="images/network_explorer_before.png" class="demo"></section>
+          <section>
+            <h2>Clustering</h2>
+            <iframe src="https://cdn.rawgit.com/john-guerra/ecdde32ab4ad91a1a240/raw/2c1a843df8631604a99140ddc9db8ee048624a79/index.html" class="blocks"></iframe>
+          </section>
+          <section>
+            <h2>Force in a box</h2>
+            <iframe src="https://cdn.rawgit.com/john-guerra/14c943d8f198d9f3fef2/raw/320474d468321d00f3241609a125c8d37935474b/index.html" class="blocks"></iframe>
+          </section>
+          <section>
+            <h2>Overview</h2><img src="images/overview_10k_nointer_cropped.png" class="demo">
+          </section>
+          <section>
+            <h2>Ego distance</h2><img src="images/network_explorer_ego_distance.png" class="demo">
+          </section>
+          <section id="InsightTweetometro">
+            <h2>Tweetometro</h2>
+            <p>Task: Twitter behavior during Presidential Elections</p>
+            <p>User: Me</p>
+          </section>
+          <section>
+            <iframe src="http://tweetometro.co" alt="images/tweetometro.png" class="blocks"></iframe><a href="http://tweetometro.co">http://tweetometro.co</a>
+          </section>
+          <section>
+            <h2>Normal tweets</h2><img src="http://tweetometro.co/img/all_tweets_May_25_2014.png" class="demo">
+          </section>
+          <section>
+            <h2>Weird tweets?</h2><img src="http://tweetometro.co/img/suspicious_tweets_May_25_2014.png" class="demo">
+          </section>
+          <section>
+            <h2>Creation dates</h2><img src="http://tweetometro.co/img/user_creation_date_May_25_2014.png" class="demo">
+          </section>
+          <section>
+            <h2>Number of followers</h2><img src="http://tweetometro.co/img/num_followers_May_25_2014.png" class="demo">
+          </section>
+          <section><span>
+              <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1032px; height: 677px;'><noscript><a href='http:&#47;&#47;tweetometro.co&#47;robots_May25.html'><img alt='Análisis Elecciones Presidenciales Colombia ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1032' height='677' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              </span></section>
+          <section id="InsightCars">
+            <h2>What car to buy?</h2>
+            <p>Task: What's the best car to buy?</p>
+            <p>User: Me</p>
+          </section>
+          <section>
+            <h2>Normal procedure</h2>
+            <p>Ask friends and family</p>
+          </section>
+          <section id="Renault4" data-background="images/renault4.jpg">
+          </section>
+          <section id="Renault4Pimped" data-background="images/renault4_pimped.jpg">
+          </section>
+          <section id="Renault4Crashed" data-background="images/renault4_crashed.jpg">
+          </section>
+          <section>
+            <h2>Problem</h2>
+            <p>That's inferring statistics from a sample n=1</p>
+          </section>
+          <section>
+            <h2>Better approach</h2>
+            <p>Data based decisions</p>
+          </section>
+          <section><img src="images/tucarro.png"><a href="http://tucarro.com">http://tucarro.com</a></section>
+          <section>
+            <iframe src="http://infovis.co/carrosUsados/todosPuntos.html" class="blocks"></iframe>
+          </section>
+          <section>
+            <iframe src="http://infovis.co/carrosUsados/depreciacionMarcas.html" class="blocks"></iframe>
+          </section>
+          <section>
+            <iframe src="http://infovis.co/carrosUsados/depreciacionesCarros.html" class="blocks"></iframe>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Take home message</h2>
+            <ul>
+              <li>Visualization: Computer + Visuals + Data + Human + Tasks</li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../lib/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+      
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+      
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+      
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-50178794-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
