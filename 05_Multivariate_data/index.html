@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visual Analytics, Visualizing Multivariate Data</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gomez">
+    <meta name="description" content="Visual Analytics">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="../lib/js/d3.min.js"></script>
+    <script src="../lib/js/bumpChartPhotos.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Visualizing Multivariate Data</h2>
+          <h3>Arranging Tables</h3><br>
+          <p class="small"><a href="http://johnguerra.co/" target="_blank"><strong>John Alexis Guerra Gómez</strong></a><span>| ja.guerrag[at]uniandes.edu.co</span><a href="http://twitter.com/duto_guerra">| @duto_guerra</a><br><span><strong>Jose Tiberio Hernández</strong> | jhernand[at]uniandes.edu.co</span><br><span>Universidad de los Andes</span>
+          </p><br>
+          <p class="small"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2016/05_Multivariate_data/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2016/05_Multivariate_data/</a></p>
+          <p class="tiny">Based on<a href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14">slides from Tamara Munzner</a></p>
+        </section>
+        <section>
+          <section> 
+            <h1>Announcements and news</h1>
+          </section>
+          <section>
+            <h2>Homeworks 2 and 3</h2>
+            <p>Use <a href="http://blockbuilder.org">blockbuilder.org</a></p>
+            <iframe src="http://blockbuilder.org" class="blocks"></iframe>
+          </section>
+          <section>
+            <h2>Project description</h2>
+            <iframe src="http://johnguerra.co/classes/isis_4822_fall_2016/images/Cronograma-Entregas-ProyectosVA-2016-2.pdf" class="blocks"></iframe>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Recap</h2>
+          </section>
+          <section data-background-size="contain" data-background="images/tamara_course14_session1-15.png"></section>
+          <section data-background-size="contain" data-background="images/tamara_course14_session1-15_highlighted.png"></section>
+          <section data-background-size="contain" data-background="images/tamara_course14_session1-19.png"></section>
+          <section data-background-size="contain" data-background="images/tamara_course14_session1-23.png"></section>
+          <section data-background-size="contain" data-background="images/tamara_course14_session1-23_highlighted.png"></section>
+        </section>
+        <section>
+          <section>
+            <h1>Arranging tables</h1>
+          </section>
+          <section>
+            <h2>Why Arrange</h2>
+            <p class="fragment">Space is the most important channel</p>
+          </section>
+          <section>
+            <h2>How to arrange?</h2>
+            <ul>
+              <li class="fragment">Quantitative data <span class="fragment">-> Express</span></li>
+              <li class="fragment">Categorical data <span class="fragment">-> Separate, Order, Align</span></li>
+            </ul>
+          </section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.003.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.004.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.005.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.006.png"></section>
+          <section>
+            <h3 class="demo">Scatterplot</h3>
+            <iframe src="http://blockbuilder.org/mbostock/3887118" class="blocks"></iframe><a href="http://blockbuilder.org/mbostock/3887118" class="tiny">http://blockbuilder.org/mbostock/3887118</a>
+          </section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.007.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.008.png"></section>
+          <section>
+            <h3 class="demo">Barchart</h3>
+            <iframe src="http://blockbuilder.org/mbostock/3885304" class="blocks"></iframe><a href="http://blockbuilder.org/mbostock/3885304" class="tiny">http://blockbuilder.org/mbostock/3887118</a>
+          </section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.009.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.010.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.011.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.012.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.013.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.014.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.015.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.016.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.017.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.018.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.019.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.020.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.021.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.022.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.023.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.024.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.025.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.026.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.027.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.028.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.029.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.030.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.031.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.032.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.033.png"></section>
+          <section data-background-size="contain" data-background="images/08_tables-spatial.034.png">   </section>
+        </section>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../lib/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+      
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+      
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+      
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
