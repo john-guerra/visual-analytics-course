@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Visual Analytics, Visualizing Time
+    title Visual Analytics, Visualizing Graphs and Trees
     meta(charset='utf-8')
     meta(name='author', content='John Alexis Guerra Gomez')
     meta(name='description', content='Visual Analytics')
@@ -28,7 +28,7 @@ html
         section
 
 
-          h2 Visualizing Time
+          h2 Visualizing Trees and Graphs
           br
           p.small
             a(href='http://johnguerra.co/', target='_blank') #[strong John Alexis Guerra Gómez]
@@ -48,16 +48,203 @@ html
           //-   |  and the arrows to advance slides
           br
           p.tiny
-            a(href='http://johnguerra.co/lectures/visualAnalytics_fall2016/07_Temporal_Networks_Trees/', target='_blank') http://johnguerra.co/lectures/visualAnalytics_fall2016/07_Temporal_Networks_Trees/
+            a(href='http://johnguerra.co/lectures/visualAnalytics_fall2016/08_Networks_Trees/', target='_blank') http://johnguerra.co/lectures/visualAnalytics_fall2016/08_Networks_Trees/
           p.tiny Based on
             a(href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14") slides from Tamara Munzner
 
 
         //- convert -density 150 -depth 8 -quality 85 ~/Dropbox/documentos/2016/andes/visual_analytics/lectures_tamara/05_rules-artery.pdf ./05_rules-artery.png
  
+
+
         section
           section
-            h2 Visualizing Time
+            h2 Visualizing Networks
+
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.002.png")
+          //- Force Directed
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.003.png")
+          section
+            h3.demo Force Directed Layout
+            iframe.blocks(src="http://blockbuilder.org/mbostock/4062045")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/4062045") http://blockbuilder.org/mbostock/4062045
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+
+          section 
+            h2 Use the force!
+
+          section
+            h3.demo Beeswarm plot
+            iframe.blocks(src="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320") http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Collision Detection
+            iframe.blocks(src="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5") http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Force in a Box
+            iframe.blocks(src="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2")
+            a.tiny(target="_blank" href="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2") http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2
+            a.tiny(target="_blank" href="http://bl.ocks.org/john-guerra/") by john-guerra
+
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.004.png")
+
+
+          //- Adjacency matrix
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.005.png")
+
+          section
+            h3.demo Adjacency Matrix
+            iframe.blocks(src="https://bost.ocks.org/mike/miserables/")
+            a.tiny(target="_blank" href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
+
+
+
+
+
+
+
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.006.png")
+
+
+          section
+            h3.demo Chord Diagram
+            iframe.blocks(src="http://blockbuilder.org/mbostock/1046712")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/1046712") http://blockbuilder.org/mbostock/1046712
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+
+          section
+            h3.demo Edge Bundling
+            iframe.blocks(src="http://blockbuilder.org/mbostock/1044242")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/1044242") http://blockbuilder.org/mbostock/1044242
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Arc Diagram
+            iframe.blocks(src="http://blockbuilder.org/enjoylife/4e435d329c2c743da33e")
+            a.tiny(target="_blank" href="http://blockbuilder.org/enjoylife/4e435d329c2c743da33e") http://blockbuilder.org/enjoylife/4e435d329c2c743da33e
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Arc Diagram
+            iframe.blocks(src="https://bost.ocks.org/mike/hive/")
+            a.tiny(target="_blank" href="https://bost.ocks.org/mike/hive/") https://bost.ocks.org/mike/hive/
+
+          
+        section
+          section
+            h2 Trees
+
+
+          //- Trees
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.007.png")
+          section
+            h3.demo Radial Tree
+            iframe.blocks(src="http://blockbuilder.org/mbostock/2e12b0bd732e7fe4000e2d11ecab0268")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/2e12b0bd732e7fe4000e2d11ecab0268") http://blockbuilder.org/mbostock/2e12b0bd732e7fe4000e2d11ecab0268
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Dendogram
+            iframe.blocks(src="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b") http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+
+          section
+            h3.demo Cluster Dendograms Radial
+            iframe.blocks(src="http://blockbuilder.org/john-guerra/7587ede430bbc18fc2a8b13ab8feafe1")
+            a.tiny(target="_blank" href="http://blockbuilder.org/john-guerra/7587ede430bbc18fc2a8b13ab8feafe1") http://blockbuilder.org/john-guerra/7587ede430bbc18fc2a8b13ab8feafe1
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Cluster Dendograms Cartesian
+            iframe.blocks(src="http://blockbuilder.org/mbostock/4063570")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/4063570") http://blockbuilder.org/mbostock/4063570
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Collapsible Tree
+            iframe.blocks(src="http://blockbuilder.org/john-guerra/32be58cf91f613d45c687095bad39432")
+            a.tiny(target="_blank" href="http://blockbuilder.org/john-guerra/32be58cf91f613d45c687095bad39432") http://blockbuilder.org/john-guerra/32be58cf91f613d45c687095bad39432
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Force Directed Tree
+            iframe.blocks(src="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37") http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+  
+
+          section
+            h2 Space Filling Techniques
+
+          //- Treemaps
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.008.png")
+          
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.009.png")
+
+          section
+            h3.demo TreeMap
+            iframe.blocks(src="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80") http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+
+          section
+            h3.demo TreeMap with parent labels
+            iframe.blocks(src="http://blockbuilder.org/mbostock/911ad09bdead40ec0061")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/911ad09bdead40ec0061") http://blockbuilder.org/mbostock/911ad09bdead40ec0061
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock          
+          
+
+          section
+            h2.demo Newsmap            
+            iframe.blocks(src="http://newsmap.jp/")
+            a.tiny(href="http://newsmap.jp/") http://newsmap.jp/
+
+          section
+            h3.demo Icicle Tree
+            iframe.blocks(src="http://blockbuilder.org/mbostock/1005873")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/1005873") http://blockbuilder.org/mbostock/1005873
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock          
+
+          section
+            h3.demo Sunburst Tree
+            iframe.blocks(src="http://blockbuilder.org/mbostock/1306365")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/1306365") http://blockbuilder.org/mbostock/1306365
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock          
+
+          section
+            h3.demo Radial Treemap
+            iframe.blocks(src="http://blockbuilder.org/mbostock/ca5b03a33affa4160321")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/ca5b03a33affa4160321") http://blockbuilder.org/mbostock/ca5b03a33affa4160321
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock          
+
+          section
+            h3.demo Kickstarter Projects
+            iframe.blocks(src="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526")
+            a.tiny(target="_blank" href="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526") http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526
+            a.tiny(target="_blank" href="http://bl.ocks.org/john-guerra/") by john-guerra          
+
+
+
+
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.010.png")
+          //- section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.011.png")
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.012.png")
+
+          //- Sets
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.023.png")
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.024.png")
+          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.025.png")
+
 
 
           section
@@ -257,35 +444,6 @@ html
               <iframe width="853" height="480" src="https://www.youtube.com/embed/FHgcJDnW8q8" frameborder="0" allowfullscreen></iframe>
 
 
-        section
-          section
-            h2 Visualizing Networks
-
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.002.png")
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.003.png")
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.004.png")
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.005.png")
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.006.png")
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.007.png")
-
-
-          //- Treemaps
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.008.png")
-
-          section
-            h2 Newsmap            
-            iframe(src="http://newsmap.jp/")
-            a.tiny(href="http://newsmap.jp/") http://newsmap.jp/
-
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.009.png")
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.010.png")
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.011.png")
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.012.png")
-
-          //- Sets
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.023.png")
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.024.png")
-          section(data-background-size="contain" data-background="images/09_networks-star-steno-topo.025.png")
 
 
 

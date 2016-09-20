@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Visual Analytics, Visualizing Time, Trees and Graphs</title>
+    <title>Visual Analytics, Visualizing Graphs and Trees</title>
     <meta charset="utf-8">
     <meta name="author" content="John Alexis Guerra Gomez">
     <meta name="description" content="Visual Analytics">
@@ -21,16 +21,130 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h2>Visualizing Time</h2><br>
+          <h2>Visualizing Trees and Graphs</h2><br>
           <p class="small"><a href="http://johnguerra.co/" target="_blank"><strong>John Alexis Guerra Gómez</strong></a><span>| ja.guerrag[at]uniandes.edu.co</span><a href="http://twitter.com/duto_guerra">| @duto_guerra</a><br><span><strong>Jose Tiberio Hernández</strong> | jhernand[at]uniandes.edu.co</span><br><span>Universidad de los Andes</span>
           </p><br>
-          <p class="tiny"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2016/07_Temporal_Networks_Trees/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2016/07_Temporal_Networks_Trees/</a></p>
+          <p class="tiny"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2016/08_Networks_Trees/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2016/08_Networks_Trees/</a></p>
           <p class="tiny">Based on<a href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14">slides from Tamara Munzner</a></p>
+        </section>
+        
+        
+        <section>
+          <section>
+            <h2>Visualizing Networks</h2>
+          </section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.002.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.003.png"></section>
+          <section>
+            <h3 class="demo">Force Directed Layout</h3>
+            <iframe src="http://blockbuilder.org/mbostock/4062045" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/4062045" class="tiny">http://blockbuilder.org/mbostock/4062045</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section> 
+            <h2>Use the force!</h2>
+          </section>
+          <section>
+            <h3 class="demo">Beeswarm plot</h3>
+            <iframe src="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320" class="tiny">http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Collision Detection</h3>
+            <iframe src="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5" class="tiny">http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Force in a Box</h3>
+            <iframe src="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2" class="tiny">http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2</a><a target="_blank" href="http://bl.ocks.org/john-guerra/" class="tiny">by john-guerra</a>
+          </section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.004.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.005.png"></section>
+          <section>
+            <h3 class="demo">Adjacency Matrix</h3>
+            <iframe src="https://bost.ocks.org/mike/miserables/" class="blocks"></iframe><a target="_blank" href="https://bost.ocks.org/mike/miserables/" class="tiny">https://bost.ocks.org/mike/miserables/</a>
+          </section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.006.png"></section>
+          <section>
+            <h3 class="demo">Chord Diagram</h3>
+            <iframe src="http://blockbuilder.org/mbostock/1046712" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/1046712" class="tiny">http://blockbuilder.org/mbostock/1046712</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Edge Bundling</h3>
+            <iframe src="http://blockbuilder.org/mbostock/1044242" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/1044242" class="tiny">http://blockbuilder.org/mbostock/1044242</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Arc Diagram</h3>
+            <iframe src="http://blockbuilder.org/enjoylife/4e435d329c2c743da33e" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/enjoylife/4e435d329c2c743da33e" class="tiny">http://blockbuilder.org/enjoylife/4e435d329c2c743da33e</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Arc Diagram</h3>
+            <iframe src="https://bost.ocks.org/mike/hive/" class="blocks"></iframe><a target="_blank" href="https://bost.ocks.org/mike/hive/" class="tiny">https://bost.ocks.org/mike/hive/</a>
+          </section>
         </section>
         <section>
           <section>
-            <h2>Visualizing Time</h2>
+            <h2>Trees</h2>
           </section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.007.png"></section>
+          <section>
+            <h3 class="demo">Radial Tree</h3>
+            <iframe src="http://blockbuilder.org/mbostock/2e12b0bd732e7fe4000e2d11ecab0268" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/2e12b0bd732e7fe4000e2d11ecab0268" class="tiny">http://blockbuilder.org/mbostock/2e12b0bd732e7fe4000e2d11ecab0268</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Dendogram</h3>
+            <iframe src="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b" class="tiny">http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Cluster Dendograms Radial</h3>
+            <iframe src="http://blockbuilder.org/john-guerra/7587ede430bbc18fc2a8b13ab8feafe1" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/john-guerra/7587ede430bbc18fc2a8b13ab8feafe1" class="tiny">http://blockbuilder.org/john-guerra/7587ede430bbc18fc2a8b13ab8feafe1</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Cluster Dendograms Cartesian</h3>
+            <iframe src="http://blockbuilder.org/mbostock/4063570" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/4063570" class="tiny">http://blockbuilder.org/mbostock/4063570</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Collapsible Tree</h3>
+            <iframe src="http://blockbuilder.org/john-guerra/32be58cf91f613d45c687095bad39432" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/john-guerra/32be58cf91f613d45c687095bad39432" class="tiny">http://blockbuilder.org/john-guerra/32be58cf91f613d45c687095bad39432</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Force Directed Tree</h3>
+            <iframe src="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37" class="tiny">http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h2>Space Filling Techniques</h2>
+          </section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.008.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.009.png"></section>
+          <section>
+            <h3 class="demo">TreeMap</h3>
+            <iframe src="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80" class="tiny">http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">TreeMap with parent labels</h3>
+            <iframe src="http://blockbuilder.org/mbostock/911ad09bdead40ec0061" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/911ad09bdead40ec0061" class="tiny">http://blockbuilder.org/mbostock/911ad09bdead40ec0061</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock          </a>
+          </section>
+          <section>
+            <h2 class="demo">Newsmap            </h2>
+            <iframe src="http://newsmap.jp/" class="blocks"></iframe><a href="http://newsmap.jp/" class="tiny">http://newsmap.jp/</a>
+          </section>
+          <section>
+            <h3 class="demo">Icicle Tree</h3>
+            <iframe src="http://blockbuilder.org/mbostock/1005873" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/1005873" class="tiny">http://blockbuilder.org/mbostock/1005873</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock          </a>
+          </section>
+          <section>
+            <h3 class="demo">Sunburst Tree</h3>
+            <iframe src="http://blockbuilder.org/mbostock/1306365" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/1306365" class="tiny">http://blockbuilder.org/mbostock/1306365</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock          </a>
+          </section>
+          <section>
+            <h3 class="demo">Radial Treemap</h3>
+            <iframe src="http://blockbuilder.org/mbostock/ca5b03a33affa4160321" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/ca5b03a33affa4160321" class="tiny">http://blockbuilder.org/mbostock/ca5b03a33affa4160321</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock          </a>
+          </section>
+          <section>
+            <h3 class="demo">Kickstarter Projects</h3>
+            <iframe src="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526" class="tiny">http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526</a><a target="_blank" href="http://bl.ocks.org/john-guerra/" class="tiny">by john-guerra          </a>
+          </section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.010.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.012.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.023.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.024.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.025.png"></section>
           <section>
             <h2 class="demo">Idiom: Line chart</h2>
             <div class="left small">
@@ -177,31 +291,19 @@
             <h2 class="demo">EventFlow demo</h2><span>
               <iframe width="853" height="480" src="https://www.youtube.com/embed/FHgcJDnW8q8" frameborder="0" allowfullscreen></iframe>
               
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
               </span>
           </section>
-        </section>
-        <section>
-          <section>
-            <h2>Visualizing Networks</h2>
-          </section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.002.png"></section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.003.png"></section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.004.png"></section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.005.png"></section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.006.png"></section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.007.png"></section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.008.png"></section>
-          <section>
-            <h2>Newsmap            </h2>
-            <iframe src="http://newsmap.jp/"></iframe><a href="http://newsmap.jp/" class="tiny">http://newsmap.jp/</a>
-          </section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.009.png"></section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.010.png"></section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.011.png"></section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.012.png"></section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.023.png"></section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.024.png"></section>
-          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.025.png"></section>
         </section>
       </div>
     </div>
