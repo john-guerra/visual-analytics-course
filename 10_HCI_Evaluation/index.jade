@@ -1,0 +1,297 @@
+doctype html
+html
+  head
+    title Visual Analytics, HCI, Usability and Evaluation
+    meta(charset='utf-8')
+    meta(name='author', content='John Alexis Guerra Gomez')
+    meta(name='description', content='Visual Analytics')
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
+    //- link(href='../lib/css/reveal.css', rel='stylesheet')
+    //- link(href='../lib/css/theme/simple.css', rel='stylesheet')
+    //- link(href='../lib/css/zenburn.css', rel='stylesheet')
+    link(href='style.css', rel='stylesheet')
+    //- Printing and PDF exports -->
+    script.
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    script(src='../lib/js/d3.min.js')
+    script(src='../lib/js/bumpChartPhotos.js')
+  body
+
+
+    .reveal
+      .slides
+
+        section
+          h2 Evaluation
+          br
+          p.small
+            a(href='http://johnguerra.co/', target='_blank') #[strong John Alexis Guerra Gómez]
+            span | ja.guerrag[at]uniandes.edu.co
+            a(href='http://twitter.com/duto_guerra') | @duto_guerra
+            br
+            span #[strong Jose Tiberio Hernández] | jhernand[at]uniandes.edu.co
+            br
+            span Universidad de los Andes
+
+            //- br
+            //- span ja.guerrag en uniandes.edu.co
+            //- br
+            //- a(href='http://twitter.com/duto_guerra') @duto_guerra
+          //- p.small Use
+          //-   strong  spacebar
+          //-   |  and the arrows to advance slides
+          br
+          p.tiny
+            a(href='http://johnguerra.co/lectures/visualAnalytics_fall2016/10_HCI_Evaluation/', target='_blank') http://johnguerra.co/lectures/visualAnalytics_fall2016/10_HCI_Evaluation/
+          p.tiny Based on
+            a(href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14") slides from Tamara Munzner
+
+
+        //- convert -density 150 -depth 8 -quality 85 ~/Dropbox/documentos/2016/andes/visual_analytics/lectures_tamara/05_rules-artery.pdf ./05_rules-artery.png
+
+
+        section
+          section
+            h2 Evaluation
+            ul
+              li.fragment Controlled Experiments involving users
+              li.fragment Natural settings involving users
+              li.fragment Any setting not involving users
+
+
+          section
+            h2 Expert reviews
+            ul
+              li.fragment Design Experts
+              li.fragment Visualization Experts
+              li.fragment Usability Experts
+              li.fragment Domain Experts
+
+          section 
+            h2 Types of expert reviews
+            ul
+              li.fragment Heuristic evaluation (golden rules)
+              li.fragment Guidelines review
+              li.fragment Consistency inspection
+              li.fragment Cognitive walkthrough
+              li.fragment Cognitive walkthrough
+              li.fragment Metaphors of human thinking
+              li.fragment Formal usability inspection (courtroom style)
+              li.fragment Accesibility inspection
+
+          section
+            h2 8 golden rules of design
+            ul.small
+              li.fragment Strive for consistency
+              li.fragment Cater for universal usability
+              li.fragment Offer informative feedback
+              li.fragment Design dialogs to yield closure
+              li.fragment Prevent errors
+              li.fragment Permit easy reversal of actions
+              li.fragment Support internal locus of control
+              li.fragment Reduce short-term memory load
+
+
+          section
+            h2 Controlled Experiments
+            ul 
+              li.fragment Experiments in the lab
+              li.fragment Controlled confounding variables
+              li.fragment Measure one or more quantitative variables
+              li.fragment
+                ul
+                  li.fragment Usability testing
+                  li.fragment Living labs
+          section
+            h3 What to measure?
+            ul
+              li.fragment Time to learn
+              li.fragment Speed of performance
+              li.fragment Rate of errors
+              li.fragment Retention over time
+              li.fragment Subject satisfaction
+
+          section
+            h2.demo Usability Testing
+            span.
+              <a data-flickr-embed="true"  href="https://www.flickr.com/photos/yandle/3231980616/in/photolist-5VAKeJ-e6vGNu-5VAMNf-5VAJkd-5VASE7-8uu5ej-3j3Cw-7WKyy5-7WKqhG-7WGg1p-bWf1T-cN17Zf-mLmuep-5iDL3Q-7WGaTx-bWf6R-pTf438-7WKzxd-7WGgwR-5VACYA-5VAHzY-5VwiYB-5VAGNL-5VADX3-5VwrGk-7yX8Zc-2vyF2V-7yX96K-dGkneA-7z2MTA-jrkhAN-fQ1cWh-69mwdv-dSJH5t-5iKD8N-2b6Jr-7WGk2x-7WGbSp-5VAQ8f-7WGb6a-7WKXYh-5iFg8H-7WGeMg-7WKssG-7WKtKd-bWffr-7WKt9m-7WKrxA-8ZAttz-7WKzLN" title="Brighton Uni Usability Lab"><img src="https://c1.staticflickr.com/4/3094/3231980616_5ccd164737_b.jpg" width="1024" height="685" alt="Brighton Uni Usability Lab"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+
+
+          section
+            h3 Natural settings involving users
+            ul 
+              li Observation
+              li Interviews
+              li Logging
+
+          section
+            h2 Triangulation
+            p Different researchers observe the same effect
+
+          section
+            h2 Interviews
+            ul
+              li.fragment Unstructured
+              li.fragment Structured
+              li.fragment Semi-structured
+              li.fragment Focus group
+              li.fragment Telephone/Online interviews
+
+          section 
+            h2 Questionnaire
+            p Like interviewsbut without the researcher present
+
+          section
+            h2 Likert Scale
+            p What do you think?
+            ul.fragment
+              li Strongly disagree
+              li disagree
+              li ok
+              li agree
+              li Strongly agree
+
+          section
+            h2 More about likert scales
+            ul
+              li.fragment Can be 3, 5, 7 or more responses
+              li.fragment Continuos or Discrete
+              li.fragment Middle response is the balance
+
+          section
+            h2 Observation
+            ul
+              li.fragment User's setting
+              li.fragment Can be direct or indirect
+              
+          section 
+            h2 Direct Observation in the field
+            p Ethnography
+
+          section 
+            h3 Direct Observation in controlled environments
+            ul
+              li.fragment Think aloud techniques
+
+          section 
+            h3 Direct Observation: tracking users
+            ul
+              li.fragment Diaries
+              li.fragment Interaction Logs and web analytics
+
+          section 
+            h2 MILCS
+            ul
+              li.fragment Multi-dimensional
+              li.fragment In-depth
+              li.fragment Long-term
+              li.fragment sase studies
+
+          section 
+            h2 Focus groups
+            p One researcher, many attendees 
+
+          section          
+            h2 Prototyping            
+            ul
+              li.fragment Low vs high fidelity?
+              li.fragment read data
+              li.fragment build scenarios, tell a story
+
+          //- section
+          //-   h2 Evaluation techniques
+          //-   ul
+          //-     li Interviews
+          //-     li Questionaires
+          //-     li Observation
+          //- section
+          //-   h2 Analyzing results
+          //-   ul
+          //-     li Quantitative analysis
+          //-     li Qualitative analysis
+
+        //- //Design principles
+        //- section
+        //-   section HCI
+
+        //- section
+        //-   section 
+
+        //-   section
+        //-     h2 Usability
+        //-   section 
+        //-     h2 Design Principles
+        //-   section
+        //-     h2 Accesibility
+        //-   section
+        //-     h2 Guidelines
+
+
+        // Design principles
+        section
+          h2 References
+          ul 
+            li
+              a(href="http://cs.umd.edu/hcil/DTUI6/") Shneiderman, B. and Plaisant, C., 1987. Designing the user interface: Strategies for effective human-computer interaction
+            li 
+              a(href="http://www.id-book.com/") Rogers, Y., Sharp, H., Preece, J. and Tepper, M., 2007. Interaction design: beyond human-computer interaction.
+
+            li 
+
+
+
+
+
+    script(src='../lib/js/head.min.js')
+    script(src='../lib/js/reveal.js')
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+
+
+
