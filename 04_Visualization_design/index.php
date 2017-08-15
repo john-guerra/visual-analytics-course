@@ -25,13 +25,13 @@
           <h3>Visual Analytics Framework</h3><br>
           <p class="small"><a href="http://johnguerra.co/" target="_blank"><strong>John Alexis Guerra Gómez</strong></a><span>| ja.guerrag[at]uniandes.edu.co</span><a href="http://twitter.com/duto_guerra">| @duto_guerra</a><br><span><strong>Jose Tiberio Hernández</strong> | jhernand[at]uniandes.edu.co</span><br><span>Universidad de los Andes</span>
           </p><br>
-          <p class="small"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2016/03_Marks_and_channels/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2016/03_Marks_and_channels/</a></p>
+          <p class="small"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2017/03_Marks_and_channels/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2017/03_Marks_and_channels/</a></p>
           <p class="tiny">Based on<a href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14">slides from Tamara Munzner</a></p>
         </section>
-        
-        
-        
-        
+
+
+
+
         <section>
           <section>
             <h2>Perception and Cognition</h2>
@@ -218,23 +218,23 @@
         dependencies: [
           // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
           { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
-      
+
           // Interpret Markdown in <section> elements
           { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      
+
           // Syntax highlight for <code> elements
           { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-      
+
           // Zoom in and out with Alt+click
           { src: '../plugin/zoom-js/zoom.js', async: true },
-      
+
           // Speaker notes
           { src: '../plugin/notes/notes.js', async: true },
-      
+
           //- // Remote control your reveal.js presentation using a touch device
           //- { src: '../plugin/remotes/remotes.js', async: true },
-      
+
           //- // MathJax
           //- { src: '../plugin/math/math.js', async: true }
         ]
@@ -245,7 +245,7 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      
+
       ga('create', 'UA-50178794-5', 'auto');
       ga('send', 'pageview');
     </script>

@@ -25,91 +25,8 @@
           <h3>Visual Analytics Framework</h3><br>
           <p class="small"><a href="http://johnguerra.co/" target="_blank"><strong>John Alexis Guerra Gómez</strong></a><span>| ja.guerrag[at]uniandes.edu.co</span><a href="http://twitter.com/duto_guerra">| @duto_guerra</a><br><span><strong>Jose Tiberio Hernández</strong> | jhernand[at]uniandes.edu.co</span><br><span>Universidad de los Andes</span>
           </p><br>
-          <p class="small"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2016/02_What_Why_How/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2016/02_What_Why_How/</a></p>
+          <p class="small"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2017/02_What_Why_How/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2017/02_What_Why_How/</a></p>
           <p class="tiny">Based on<a href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14">slides from Tamara Munzner</a></p>
-        </section>
-        <section>
-          <section>
-            <h1>Idioms</h1>
-            <p>Distinct approach to creating or manipulating visual representations</p>
-          </section>
-          <section>
-            <h2>Idiom design space</h2>
-            <p>The design space of possible vis idioms is huge, and includes the considerations of both how to create and how to interact with visual representations</p>
-          </section>
-          <section>
-            <h2>Idioms</h2>
-            <ul>
-              <li class="fragment">How to draw it: <strong>visual encoding</strong> idiom</li>
-              <ul>
-                <li class="fragment">Many possibilities for how to create</li>
-              </ul>
-              <li class="fragment">How to manipulate it: <strong>interaction</strong> idiom</li>
-              <ul>
-                <li class="fragment">Even more possibilities</li>
-                <li class="fragment">Make single idiom dynamic</li>
-                <li class="fragment">Link multiple idioms together through interaction</li>
-              </ul>
-            </ul>
-          </section>
-          <section>
-            <h3>Why focus in tasks and effectiveness?</h3>
-            <p>Computer-based visualization systems provide visual representations of datasets designed to help people carry out <strong>tasks</strong> more <strong>effectively</strong>.</p>
-          </section>
-          <section>
-            <h3>Why focus in tasks and effectiveness?</h3>
-            <ul class="small">
-              <li class="fragment">Tasks serve as constraint on design (as does data)</li>
-              <ul>
-                <li class="fragment">Idioms do not serve all tasks equally!</li>
-                <li class="fragment">Challenge: recast tasks from domain-specific vocabulary to abstract forms</li>
-              </ul>
-              <li class="fragment">Most possibilities ineffective</li>
-              <ul>
-                <li class="fragment">Validation is necessary, but tricky</li>
-                <li class="fragment">Increases chance of finding good solutions if you understand full space of possibilities</li>
-              </ul>
-            </ul>
-          </section>
-          <section>
-            <h3>Why focus in tasks and effectiveness?</h3>
-            <ul>
-              <li class="fragment">What counts as effective?</li>
-              <ul>
-                <li class="fragment">novel: enable entirely new kinds of analysis</li>
-                <li class="fragment">faster: speed up existing workflows</li>
-              </ul>
-            </ul>
-          </section>
-          <section>
-            <h2>Resource limitations</h2>
-            <p>Vis designers must take into account three very different kinds of resource limitations: those of computers, of humans, and of displays.</p>
-          </section>
-          <section>
-            <h2>Computational limits</h2>
-            <ul>
-              <li class="fragment">Processing time</li>
-              <li class="fragment">System memory</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Human limits</h2>
-            <ul>
-              <li class="fragment">Human attention</li>
-              <li class="fragment">Memory</li>
-              <li class="fragment">Retention</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Display limits</h2>
-            <ul>
-              <li class="fragment">Pixels are precious resource, the most constrained resource</li>
-              <li class="fragment">Information density: ratio of space used to encode info vs unused whitespace</li>
-              <ul>
-                <li class="fragment">Tradeoff between clutter and wasting space, find sweet spot between dense and sparse</li>
-              </ul>
-            </ul>
-          </section>
         </section>
         <section>
           <section>
@@ -189,10 +106,6 @@
         </section>
         <section>
           <section>
-            <h2>Exercise</h2>
-            <p>Let's find in how many ways we can visualize two numbers 13 and 23</p>
-          </section>
-          <section>
             <h2>Marks and channels</h2>
           </section>
           <section data-background-size="contain" data-background="images/tamara_course14_session1-29.png"></section>
@@ -248,6 +161,61 @@
           <section data-background-size="contain" data-background="images/tamara_course14_session1-39.png"></section>
           <section data-background-size="contain" data-background="images/tamara_course14_session1-40.png"></section>
           <section data-background-size="contain" data-background="images/tamara_course14_session1-41.png"></section>
+        </section>
+        <section>
+          <section>
+            <h1>D3 v4 Tutorial</h1>
+          </section>
+          <section>
+            <h2><a href="https://jsfiddle.net/duto_guerra/cds7nkow/5/">Step 0: Setup</a></h2>
+            <ul>
+              <li>Add https://d3js.org/d3.v4.min.js to external resources</li>
+            </ul>
+          </section>
+          <section>
+            <h3><a href="https://jsfiddle.net/duto_guerra/cds7nkow/7/">Step 1: Selections</a></h3>
+            <iframe src="https://jsfiddle.net/duto_guerra/cds7nkow/7/" class="blocks"></iframe>
+          </section>
+          <section>
+            <h3><a href="https://jsfiddle.net/duto_guerra/cds7nkow/9/">Step 2: Data binding (create)</a></h3>
+            <iframe src="https://jsfiddle.net/duto_guerra/cds7nkow/9/" class="blocks"></iframe>
+          </section>
+          <section>
+            <h3><a href="https://jsfiddle.net/duto_guerra/cds7nkow/12/">Step 3: Update and remove</a></h3>
+            <iframe src="https://jsfiddle.net/duto_guerra/cds7nkow/12/" class="blocks"></iframe>
+          </section>
+          <section>
+            <h3><a href="https://jsfiddle.net/duto_guerra/cds7nkow/13/">Step 4: svg</a></h3>
+            <iframe src="https://jsfiddle.net/duto_guerra/cds7nkow/13/" class="blocks"></iframe>
+          </section>
+          <section>
+            <h3><a href="https://jsfiddle.net/duto_guerra/cds7nkow/16/">Step 5: Scales</a></h3>
+            <iframe src="https://jsfiddle.net/duto_guerra/cds7nkow/16/" class="blocks"></iframe>
+          </section>
+          <section>
+            <h3><a href="https://jsfiddle.net/duto_guerra/cds7nkow/17/">Step 6: Axis</a></h3>
+            <iframe src="https://jsfiddle.net/duto_guerra/cds7nkow/17/" class="blocks"></iframe>
+          </section>
+          <section>
+            <h3><a href="https://jsfiddle.net/duto_guerra/cds7nkow/18/">Step 7: Transitions</a></h3>
+            <iframe src="https://jsfiddle.net/duto_guerra/cds7nkow/18/" class="blocks"></iframe>
+          </section>
+          <section>
+            <h3><a href="https://jsfiddle.net/duto_guerra/cds7nkow/20/">Step 8: More complex data</a></h3>
+            <iframe src="https://jsfiddle.net/duto_guerra/cds7nkow/20/" class="blocks"></iframe>
+          </section>
+          <section>
+            <h3><a href="https://jsfiddle.net/duto_guerra/cds7nkow/22/">Step 9: Merge</a></h3>
+            <iframe src="https://jsfiddle.net/duto_guerra/cds7nkow/22/" class="blocks"></iframe>
+          </section>
+          <section>
+            <h3><a href="https://jsfiddle.net/duto_guerra/cds7nkow/23/">Step 10: Change mark</a></h3>
+            <iframe src="https://jsfiddle.net/duto_guerra/cds7nkow/23/" class="blocks"></iframe>
+          </section>
+          <section>
+            <h3><a href="https://jsfiddle.net/duto_guerra/cds7nkow/25/">Step 11: Add dimension</a></h3>
+            <iframe src="https://jsfiddle.net/duto_guerra/cds7nkow/25/" class="blocks"></iframe>
+          </section>
         </section>
       </div>
     </div>

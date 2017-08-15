@@ -48,79 +48,10 @@ html
           //-   |  and the arrows to advance slides
           br
           p.small
-            a(href='http://johnguerra.co/lectures/visualAnalytics_fall2016/02_What_Why_How/', target='_blank') http://johnguerra.co/lectures/visualAnalytics_fall2016/02_What_Why_How/
+            a(href='http://johnguerra.co/lectures/visualAnalytics_fall2017/02_What_Why_How/', target='_blank') http://johnguerra.co/lectures/visualAnalytics_fall2017/02_What_Why_How/
           p.tiny Based on
             a(href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14") slides from Tamara Munzner
 
-
-        section
-          section
-            h1 Idioms
-            p Distinct approach to creating or manipulating visual representations
-
-          section
-            h2 Idiom design space
-            p The design space of possible vis idioms is huge, and includes the considerations of both how to create and how to interact with visual representations
-
-          section
-            h2 Idioms
-            ul
-              li.fragment How to draw it: #[strong visual encoding] idiom
-              ul
-                li.fragment Many possibilities for how to create
-              li.fragment How to manipulate it: #[strong interaction] idiom
-              ul
-                li.fragment Even more possibilities
-                li.fragment Make single idiom dynamic
-                li.fragment Link multiple idioms together through interaction
-
-          section
-            h3 Why focus in tasks and effectiveness?
-            p Computer-based visualization systems provide visual representations of datasets designed to help people carry out #[strong tasks] more #[strong effectively].
-
-          section
-            h3 Why focus in tasks and effectiveness?
-            ul.small
-              li.fragment Tasks serve as constraint on design (as does data)
-              ul
-                li.fragment Idioms do not serve all tasks equally!
-                li.fragment Challenge: recast tasks from domain-specific vocabulary to abstract forms
-              li.fragment Most possibilities ineffective
-              ul
-                li.fragment Validation is necessary, but tricky
-                li.fragment Increases chance of finding good solutions if you understand full space of possibilities
-          section
-            h3 Why focus in tasks and effectiveness?
-            ul
-              li.fragment What counts as effective?
-              ul
-                li.fragment novel: enable entirely new kinds of analysis
-                li.fragment faster: speed up existing workflows
-
-
-          section
-            h2 Resource limitations
-            p Vis designers must take into account three very different kinds of resource limitations: those of computers, of humans, and of displays.
-
-          section
-            h2 Computational limits
-            ul
-              li.fragment Processing time
-              li.fragment System memory
-          section
-            h2 Human limits
-            ul
-              li.fragment Human attention
-              li.fragment Memory
-              li.fragment Retention
-
-          section
-            h2 Display limits
-            ul
-              li.fragment Pixels are precious resource, the most constrained resource
-              li.fragment Information density: ratio of space used to encode info vs unused whitespace
-              ul
-                li.fragment Tradeoff between clutter and wasting space, find sweet spot between dense and sparse
 
 
         section
@@ -210,10 +141,6 @@ html
 
         section
           section
-            h2 Exercise
-            p Let's find in how many ways we can visualize two numbers 13 and 23
-
-          section
             h2 Marks and channels
 
           //- Marks and channels
@@ -279,10 +206,76 @@ html
 
 
 
+        //- ######### D3 tutorial
+        section
+          section
+           h1 D3 v4 Tutorial
+
+          section
+            h2
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/5/") Step 0: Setup
+
+            ul
+              li Add https://d3js.org/d3.v4.min.js to external resources
 
 
 
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/7/") Step 1: Selections
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/7/")
 
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/9/") Step 2: Data binding (create)
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/9/")
+
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/12/") Step 3: Update and remove
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/12/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/13/") Step 4: svg
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/13/")
+
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/16/") Step 5: Scales
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/16/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/17/") Step 6: Axis
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/17/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/18/") Step 7: Transitions
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/18/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/20/") Step 8: More complex data
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/20/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/22/") Step 9: Merge
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/22/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/23/") Step 10: Change mark
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/23/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/25/") Step 11: Add dimension
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/25/")
 
 
 
